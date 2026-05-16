@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>QR Code Generator</title>
+</head>
+<body class="bg-gray-800 min-h-screen flex flex-col justify-center items-center">
+    <div class="bg-white px-8 py-6 rounded-lg">
+        <h1 class="text-2xl font-bold mb-3">QR Code Generator</h1>
+        <p class="text-md font-semibold">Enter your text or url:</p>
+        <input type="text" id="qrtext" class="px-2 text-md border rounded-sm" placeholder="www.google.com">
+        <p id="errmsg" class="text-xs text-left font-medium mt-1 hidden text-red-500">Empty field!</p>
+        <div id="imgBox" class="mt-3 max-h-0 opacity-0 scale-95 overflow-hidden transition-all duration-1400 ease-out">
+            <img src="" alt="" id="qrImage">
+        </div>
+        <button onclick="generateQR()" class="mt-6 w-full py-2 bg-sky-600 text-white border rounded-sm px-2">Generate QR Code</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
